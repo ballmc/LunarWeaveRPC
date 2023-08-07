@@ -6,10 +6,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import com.example.mod.discord.RPC;
+
 @Mixin(Minecraft.class)
 public abstract class MinecraftMixin {
     @Inject(method = "startGame", at = @At("HEAD"))
     public void onStartGame(CallbackInfo ci) {
         System.out.println("Mixin Test");
+        RPC.instance();
     }
 }
