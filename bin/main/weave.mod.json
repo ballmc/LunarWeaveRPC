@@ -1,8 +1,0 @@
-{
-  "mixinConfigs": [
-    "lunarweaverpc.mixins.json"
-  ],
-  "entrypoints": [
-    "me.ballmc.mod.LunarWeaveRPC"
-  ]
-}
