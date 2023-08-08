@@ -14,7 +14,13 @@ public abstract class MinecraftMixin {
 
     @Inject(method = "startGame", at = @At("HEAD"))
     public void onStartGame(CallbackInfo ci) {
-        System.out.println("Mixin Test");
-        rpcInstance.updateDiscordActivity();
+        System.out.println("Starting LunarWeaveRPC");
+        rpcInstance.startUpdatingDiscordActivity();
+    }
+
+    @Inject(method = "shutdown", at = @At("HEAD"))
+    public void onShutdown(CallbackInfo ci) {
+        System.out.println("Shutting down LunarWeaveRPC");
+        rpcInstance.shutdown();
     }
 }
