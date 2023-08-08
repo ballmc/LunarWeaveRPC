@@ -1,4 +1,4 @@
-package com.example.mod.discord;
+package me.ballmc.mod.discord;
 
 import de.jcm.discordgamesdk.Core;
 import de.jcm.discordgamesdk.CreateParams;

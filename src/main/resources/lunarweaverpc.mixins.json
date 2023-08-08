@@ -1,6 +1,6 @@
 {
   "compatibilityLevel": "JAVA_8",
-  "package": "com.example.mod.mixins",
+  "package": "me.ballmc.mod.mixins",
   "mixins": [
     "MinecraftMixin"
   ]
