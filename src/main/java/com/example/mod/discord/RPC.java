@@ -11,10 +11,12 @@ import java.util.concurrent.Executors;
 import net.minecraft.client.Minecraft;
 
 public class RPC {
+    private static RPC instance;
+
     private Core discordCore;
     private ExecutorService executorService;
 
-    public RPC() {
+    private RPC() {
         try (CreateParams params = new CreateParams()) {
             // 1138189932679155813 with L at end
             params.setClientID(1138189932679155813L);
@@ -24,6 +26,13 @@ public class RPC {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static RPC getInstance() {
+        if (instance == null) {
+            instance = new RPC();
+        }
+        return instance;
     }
 
     public void startUpdatingDiscordActivity() {
