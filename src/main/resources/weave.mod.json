@@ -4,5 +4,12 @@
   ],
   "entrypoints": [
     "me.ballmc.mod.LunarWeaveRPC"
-  ]
+  ],
+  "about": {
+    "name": "LunarWeaveRPC",
+    "version": "1.0.1",
+    "author": "ballmc",
+    "description": "Fixes Lunar Client not showing up correctly on Discord Rich Presence for MacOS and Linux users.",
+    "website": "https://github.com/ballmc/LunarWeaveRPC"
+  }
 }
